@@ -1,4 +1,4 @@
-#include "../ft_strtol.c"
+#include "ft_strtol.h"
 #include <assert.h>
 #include <stdlib.h>
 #include <ctype.h>
