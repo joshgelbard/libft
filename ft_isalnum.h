@@ -6,12 +6,12 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/24 01:24:15 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/02/24 01:24:38 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/02/24 01:48:23 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_ISALNUM_H
 # define FT_ISALNUM_H
-int	ft_isalnum(int c);
 
+int	ft_isalnum(int c);
 #endif
