@@ -6,11 +6,12 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/20 20:47:39 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/02/23 22:19:48 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/02/24 02:00:06 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_strchr.h"
+#include <string.h>
 
 char	*ft_strchr(const char *s, int c)
 {

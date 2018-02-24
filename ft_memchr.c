@@ -6,7 +6,7 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/20 15:11:43 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/02/23 16:57:58 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/02/24 01:58:05 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t	i;
-	int		d;
 
 	i = 0;
 	while (i < n)
