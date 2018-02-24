@@ -6,7 +6,7 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/20 15:43:34 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/02/20 16:32:04 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/02/24 01:21:00 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 char	*ft_strcpy(char *dst, const char *src)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while ((dst[i] = src[i]))
