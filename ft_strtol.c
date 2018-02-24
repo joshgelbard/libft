@@ -6,7 +6,7 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/22 17:03:18 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/02/23 15:02:02 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/02/24 03:35:46 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static void	handle_prefix(const char **str_p, int *base_p, int *neg_flag)
 	if (*str == '-' || *str == '+')
 		*neg_flag = (*str++ == '-');
 	base = get_base(str, *base_p);
-	if (base == 16 && strncmp(str, "0x", 2) == 0 && ft_ctoi(str[2], 16) != -1)
+	if (base == 16 && ft_strncmp(str, "0x", 2) == 0 && ft_ctoi(str[2], 16) != -1)
 		str += 2;
 	*base_p = (ft_ctoi(*str, base) == -1) ? 0 : base;
 	*str_p = str;

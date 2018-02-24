@@ -11,6 +11,7 @@ int	main(void)
 	assert(strncmp(s3, s1, 0) == ft_strncmp(s3, s1, 0));
 	assert(strncmp(s1, s4, 5) == ft_strncmp(s1, s4, 5));
 	assert(strncmp(s4, s4, 12) == ft_strncmp(s4, s4, 12));
+	assert(strncmp("0x", "0x1234", 2) == ft_strncmp("0x", "0x1234", 2));
 	puts("ok");
 	return (0);
 }

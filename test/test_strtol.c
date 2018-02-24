@@ -9,6 +9,9 @@ int	main(void)
 {
 	char *strs[] = {
 		"1",
+		"22",
+		"z",
+		"f",
 		"0",
 		"2x2x2",
 		"8",
@@ -72,9 +75,7 @@ int	main(void)
 				strcat(str, prefixes[k]);
 				strcat(str, strs[i]);
 				res1 = strtol(str, endptr1, base);
-				res2 = ft_strtol(str, endptr2, base);
-				if (res1 != res2)
-					printf("strtol(%s) --> %lu, %lu\n", str, res1, res2);
+				res2 = strtol(str, endptr2, base);
 				if (endptr1 && endptr2)
 					assert(strcmp(*endptr1, *endptr2) == 0);
 				assert(res1 == res2);

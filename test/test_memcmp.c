@@ -12,6 +12,7 @@ int	main(void)
 	assert(ft_memcmp(banana, banana, 7) == memcmp(banana, banana, 7));
 	assert(ft_memcmp(banana + 1, apple + 1, 0) == memcmp(banana + 1, apple + 1, 0));
 	assert(ft_memcmp(unsgncheck, unsgncheck2, 9) == memcmp(unsgncheck, unsgncheck2, 9));
+	assert(memcmp("0x", "0x1234", 2) == ft_memcmp("0x", "0x1234", 2));
 	puts("ok");
 	return (0);
 }
