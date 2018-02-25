@@ -1,9 +1,4 @@
 #include "ft_strtol.h"
-#include <assert.h>
-#include <stdlib.h>
-#include <ctype.h>
-#include <stdio.h>
-#include <strings.h>
 
 int	main(void)
 {
@@ -52,14 +47,10 @@ int	main(void)
 	};
 	int bases[] = { 10, 0, 2, 36, 35, 16, 8, 1, -1, 37, 90000, -999 };
 	int i, j, k, base;
-	char **endptr1;
-	char **endptr2;
+	char *endptr1 = malloc(sizeof (char *));
+	char *endptr2 = malloc(sizeof (char *));
 	long res1, res2;
-	char str[90];
-	endptr1 = malloc(sizeof *endptr1);
-	endptr2 = malloc(sizeof *endptr2);
-	//endptr1 = (char **)NULL;
-	//endptr2 = (char **)NULL;
+	char *str = calloc(90, 1);
 	
 	i = -1;
 	while (strs[++i] != NULL)
@@ -68,16 +59,15 @@ int	main(void)
 		while (bases[++j] != -999)
 		{
 			k = -1;
+			base = bases[j];
 			while (prefixes[++k] != NULL)
 			{
-				base = bases[j];
 				bzero(str, 90);
 				strcat(str, prefixes[k]);
 				strcat(str, strs[i]);
-				res1 = strtol(str, endptr1, base);
-				res2 = strtol(str, endptr2, base);
-				if (endptr1 && endptr2)
-					assert(strcmp(*endptr1, *endptr2) == 0);
+				res1 = strtol(str, &endptr1, base);
+				res2 = ft_strtol(str, &endptr2, base);
+				assert(endptr1 == endptr2);
 				assert(res1 == res2);
 			}
 		}

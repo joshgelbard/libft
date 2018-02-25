@@ -6,7 +6,7 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/22 17:03:18 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/02/24 03:35:46 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/02/24 18:52:49 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ long		ft_strtol(const char *str, char **endptr, int base)
 		end += (str - end);
 	while (*end && ft_ctoi(*end, base) != -1)
 		end += 1;
-	if (endptr && *endptr)
+	if (*endptr)
 		*endptr = end;
 	tmp = 0;
 	res = tmp;
