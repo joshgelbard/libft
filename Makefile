@@ -1,19 +1,32 @@
-.PHONY: all
-.PHONY: fclean
-.PHONY: re
-.PHONY: clean
+.PHONY: all fclean re clean
 
-sources = $(wildcard ./ft_*.c)
-objects = $(sources:.c=.o)
 target = libft.a
+
+vpath ft_% string
+includes = -I string
+function_names = memset bzero memcpy memccpy memmove memchr memcmp strlen \
+				 strdup strcpy strncpy strcat strncat strlcat strchr strrchr \
+				 strstr strnstr strcmp strncmp
+
+vpath ft_% ctype
+includes += -I ctype
+function_names += isalpha isdigit isalnum isprint toupper tolower isspace isupper islower
+
+vpath ft_% stdlib
+includes += -I stdlib
+function_names += ctoi strtol atoi
+
+headers = ft_string.h ft_stdlib.h ft_ctype.h
+objects = $(patsubst %, ft_%.o, $(function_names))
 
 SHELL = /bin/sh
 CC = gcc
-CFLAGS = -Werror -Wextra -Wall -I.
+CFLAGS = -Wall -Wextra
 
 all: $(target)
 
-$(target): $(objects)
+$(target): CFLAGS += -Werror $(includes)
+$(target): $(objects) $(headers)
 	ar rc $(target) $^
 	ranlib $(target)
 
@@ -26,10 +39,25 @@ fclean: clean
 re: fclean
 	make
 
-with_test_includes = -include assert.h -include string.h -include stdio.h -include stdlib.h -include ctype.h
-testfile = test/test_$(f).c
+#                      TESTS
+#-------------------------------------------------
+#-------------------------------------------------
+#-------------------------------------------------
 
-test: all $(testfile)
-	$(CC) -L. -lft -I. $(with_test_includes) $(testfile) && ./a.out
+.PHONY: test testall testclean retest
 
-retest: re test
+vpath test% test test/stdlib test/ctype test/string
+
+CFLAGS := $(CFLAGS) $(includes) -I test
+
+test: testall
+
+testall: all clean
+	find test -name "test*.c" -exec gcc $(CFLAGS) -L. -lft {} -o test.out \; -exec ./test.out \;
+	rm ./test.out
+
+testclean:
+	-rm -f test/*/*.o
+	-rm -f ./test.out
+
+retest: testclean testall
