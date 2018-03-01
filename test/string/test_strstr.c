@@ -35,5 +35,6 @@ int	main(void)
 		t = pairs[i][1];
 		assert(test_strstr(s, t));
 	}
+	puts("strstr ok");
 	return (0);
 }

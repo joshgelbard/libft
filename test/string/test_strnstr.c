@@ -36,5 +36,6 @@ int	main(void)
 		for (int j = 0; j < 15; j++)
 			assert(test_strnstr(s, t, j));
 	}
+	puts("strnstr ok");
 	return (0);
 }
