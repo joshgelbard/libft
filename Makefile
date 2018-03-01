@@ -74,3 +74,26 @@ fclean: clean
 
 re: fclean
 	make
+
+#                      TESTS
+#-------------------------------------------------
+#-------------------------------------------------
+#-------------------------------------------------
+
+.PHONY: test testall testclean retest
+
+vpath test% test test/stdlib test/ctype test/string
+
+CFLAGS := $(CFLAGS) $(includes) -I test
+
+test: testall
+
+testall: all clean
+	find test -name "test*.c" -print -exec gcc $(CFLAGS) -L. -lft {} -o test.out \; -exec ./test.out \;
+	rm ./test.out
+
+testclean:
+	-rm -f test/*/*.o
+	-rm -f ./test.out
+
+retest: testclean testall
