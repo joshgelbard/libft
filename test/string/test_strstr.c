@@ -1,24 +1,39 @@
 #include "test.h"
 #include "ft_string.h"
 
-int	main(void)
+int	test_strstr(char *s1, char *s2)
 {
-	char *banana = "banana";
-	char *apple = "apple";
-	char *ppl = "ppl";
-	char *empty = "";
-	assert(strstr(banana, apple) == ft_strstr(banana, apple));
-	assert(strstr(apple, banana) == ft_strstr(apple, banana));
-
-	assert(strstr(ppl, apple) == ft_strstr(ppl, apple));
-	assert(strstr(apple, ppl) == ft_strstr(apple, ppl));
-
-	assert(strstr(apple, empty) == ft_strstr(apple, empty));
-	assert(strstr(empty, apple) == ft_strstr(empty, apple));
-
-	assert(strstr(apple, apple) == ft_strstr(apple, apple));
-	assert(strstr(empty, empty) == ft_strstr(empty, empty));
-	puts("strstr ok");
-	return (0);
+	int res1 = (strstr(s1, s2) == ft_strstr(s1, s2));
+	int res2 = (strstr(s2, s1) == ft_strstr(s2, s1));
+	if (!res1)
+	{
+		printf("failed on %s, %s\n", s1, s2);
+		printf("theirs: %p, yours: %p\n", strstr(s1, s2), ft_strstr(s1, s2));
+	}
+	if (!res2)
+	{
+		printf("failed on %s, %s\n", s2, s1);
+		printf("theirs: %p, yours: %p\n", strstr(s2, s1), ft_strstr(s2, s1));
+	}
+	return (res1 && res2);
 }
 
+int	main(void)
+{
+	char *pairs[][2] = {
+		{ "xa", "a" },
+		{ "ababababc", "abc" },
+		{ "1212", "21" },
+		{ "nooooooooope", "oo!" }
+	};
+	char *s;
+	char *t;
+
+	for (int i = 0; i < 4; i++)
+	{
+		s = pairs[i][0];
+		t = pairs[i][1];
+		assert(test_strstr(s, t));
+	}
+	return (0);
+}
