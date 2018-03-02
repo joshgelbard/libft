@@ -29,7 +29,7 @@ function_names += ctoi strtol atoi
 sublibs += string_ext
 vpath ft_% string_ext
 function_names += memalloc memdel strnew strdel strclr striter striteri strmap strmapi \
-				  strequ strnequ #strsub strjoin strtrim strsplit itoa
+				  strequ strnequ strsub #strjoin strtrim strsplit itoa
 
 #                     LIST
 
