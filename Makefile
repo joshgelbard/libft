@@ -30,7 +30,19 @@ sublibs += string_ext
 vpath ft_% string_ext
 function_names += memalloc memdel strnew strdel strclr striter striteri strmap strmapi \
 				  strequ strnequ strsub strjoin strtrim strsplit itoa
-#
+
+#                     LIBC STDIO
+
+sublibs += stdio
+vpath ft_% stdio
+function_names += putchar_fd putchar putstr_fd putstr putendl_fd putendl puts
+
+#                     STDIO_EXT
+
+sublibs += stdio_ext
+vpath ft_% stdio_ext
+function_names += putnbr putnbr_fd
+
 #                     LIST
 
 
