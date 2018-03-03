@@ -6,57 +6,44 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/02 14:05:07 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/02 15:33:53 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/02 16:28:40 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_string_ext.h"
 #include "ft_string.h"
 #include <string.h>
+#define UNSIGNED_POSITIVE(n) (unsigned int)( n < 0 ? n * -1 : n )
 
-static char	*itoa_str_init(unsigned int un, int wasnegative)
+static size_t	itoa_get_len(int n)
 {
 	size_t	cc;
-	char	*s;
 
-	cc = 1 + wasnegative;
-	while (un > 9)
+	cc = (n < 0) + 1;
+	while (UNSIGNED_POSITIVE(n) > 9)
 	{
 		++cc;
-		un /= 10;
+		n /= 10;
 	}
-	s = ft_strnew(cc);
-	if (s)
-		while(cc)
-			s[--cc] = '0';
-	return (s);
-}
-
-static void	itoa_str_fill_pos(char *s, unsigned int un)
-{
-	size_t	i;
-
-	i = ft_strlen(s) - 1;
-	while (i)
-	{
-		s[i] += un % 10;
-		un /= 10;
-		--i;
-	}
-	s[i] += un;
+	return (cc);
 }
 
 char	*ft_itoa(int n)
 {
-	char			*s;
-	int				neg;
+	char	*s;
+	size_t	len;
 
-	neg = (n < 0);
-	s = itoa_str_init((unsigned int)(neg ? -n : n), neg);
+	len = itoa_get_len(n);
+	s = ft_strnew(len);
 	if (!s)
 		return (NULL);
-	itoa_str_fill_pos(s + neg, (unsigned int)(neg ? -n : n));
-	if (neg)
+	if (n < 0)
 		s[0] = '-';
+	while (UNSIGNED_POSITIVE(n) > 9)
+	{
+		s[--len] = '0' + UNSIGNED_POSITIVE(n) % 10;
+		n /= 10;
+	}
+	s[--len] = '0' + UNSIGNED_POSITIVE(n);
 	return (s);
 }
