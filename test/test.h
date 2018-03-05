@@ -3,10 +3,15 @@
 #include <string.h>
 #include <assert.h>
 #include <ctype.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <unistd.h>
+#include <fcntl.h>
 #include "ft_string.h"
 #include "ft_stdlib.h"
 #include "ft_ctype.h"
 #include "ft_string_ext.h"
+#include "ft_stdio.h"
 
 #define DO_MEMFN_TEST(fn)             \
 void	test_ ## fn (void)            \
