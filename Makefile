@@ -41,7 +41,7 @@ function_names += putchar_fd putchar putstr_fd putstr putendl_fd putendl puts
 
 sublibs += stdio_ext
 vpath ft_% stdio_ext
-function_names += #putnbr putnbr_fd
+function_names += putnbr_fd #putnbr
 
 #                     LIST
 
