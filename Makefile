@@ -112,6 +112,15 @@ testall: all
 	find test -name "test*.c" -print -exec gcc $(CFLAGS) -L. -lft {} -o test.out \; -exec ./test.out \;
 	rm ./test.out
 
+testsome: all
+	find test/$x -name "test*.c" -print -exec gcc $(CFLAGS) -L. -lft {} -o test.out \; -exec ./test.out \;
+	rm ./test.out
+
+testone: all
+	find test -name "test*$x*.c" -print -exec gcc $(CFLAGS) -L. -lft {} -o test.out \; -exec ./test.out \;
+	rm ./test.out
+
+
 testclean:
 	-rm -f test/*/*.o
 	-rm -f ./test.out
