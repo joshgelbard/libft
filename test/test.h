@@ -35,3 +35,13 @@ int	main(void)                        \
     test_ ## fn ();                   \
     return (0);                       \
 }
+
+void	print_list(t_list *lst)
+{
+	while (lst)
+	{
+		printf("(`%s'%lu) -> ", lst->content, lst->content_size);
+		lst = lst->next;
+	}
+	printf("%s\n", (void *)lst);
+}
