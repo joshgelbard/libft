@@ -6,12 +6,13 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/05 18:28:09 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/05 18:28:11 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/06 13:44:14 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_LIST_H
 # define FT_LIST_H
+# include <string.h>
 
 typedef struct		s_list
 {
