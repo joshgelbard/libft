@@ -45,6 +45,9 @@ function_names += putnbr_fd putnbr
 
 #                     LIST
 
+sublibs += list
+vpath ft_% list
+function_names += #ft_lstnew ft_lstdelone ft_lstdel ft_lstadd ft_lstiter ft_lstmap
 
 #                 USEFUL VARIABLES
 #-------------------------------------------------

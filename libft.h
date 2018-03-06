@@ -6,7 +6,7 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 17:54:13 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/05 18:16:42 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/05 18:23:56 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,4 +18,5 @@
 # include "ft_string_ext.h"
 # include "ft_stdio.h"
 # include "ft_stdio_ext.h"
+# include "ft_list.h"
 #endif

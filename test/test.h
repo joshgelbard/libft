@@ -14,6 +14,7 @@
 #include "ft_string_ext.h"
 #include "ft_stdio.h"
 #include "ft_stdio_ext.h"
+#include "ft_list.h"
 
 #define DO_MEMFN_TEST(fn)             \
 void	test_ ## fn (void)            \
