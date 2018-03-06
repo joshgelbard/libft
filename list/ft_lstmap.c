@@ -6,11 +6,13 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/05 22:58:15 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/06 13:31:55 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/06 15:15:09 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_list.h"
+#include <string.h>
+#include <stdlib.h>
 
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
@@ -27,6 +29,6 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 		lst = lst->next;
 	}
 	curr = dummy->next;
-	ft_lstdelone(&dummy);
+	free(dummy);
 	return (curr);
 }
