@@ -6,7 +6,7 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/01 22:31:58 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/02 13:53:47 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/05 16:39:36 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,6 @@ char	**ft_strsplit(char const *s, char c)
 			ary[i++] = ft_strsub(s, 0, ws);
 		s += ws;
 	}
-	ary[i] = ft_strnew(0);
+	ary[i] = NULL;
 	return (ary);
 }

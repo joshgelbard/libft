@@ -10,12 +10,14 @@ static int test_one(char *str, char **expect)
 {
 	char **res = ft_strsplit(str, '*');
 	int correct = 1;
-	for (int i = 0; expect[i][0] != '\0'; i++)
+	for (int i = 0; expect[i] != NULL; i++)
+	{
 		if (!(res[i]) || strcmp(res[i], expect[i]))
 		{
 			print_was_wrong(res, expect, i, str);
 			correct = 0;
 		}
+	}
 	return (correct);
 }
 
@@ -39,10 +41,10 @@ void make_str(char *s, int i, int j, int k, int l)
 
 int	main(void)
 {
-	char *if_one[] = {"one2three", ""};
-	char *if_twoA[] = {"one", "2three", ""};
-	char *if_twoB[] = {"one2", "three", ""};
-	char *if_three[] = {"one", "2", "three", ""};
+	char *if_one[] = {"one2three", NULL};
+	char *if_twoA[] = {"one", "2three", NULL};
+	char *if_twoB[] = {"one2", "three", NULL};
+	char *if_three[] = {"one", "2", "three", NULL};
 	char *s = calloc(90, 1);
 	for (int i = 0; i < 3; i++)
 	for (int j = 0; j < 3; j++)
