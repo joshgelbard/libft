@@ -6,7 +6,7 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/01 17:12:33 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/01 17:37:56 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/05 16:25:13 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 
 char	*ft_strnew(size_t size)
 {
-	return ((char *)ft_memalloc(size));
+	return ((char *)ft_memalloc(size + 1));
 }
