@@ -6,10 +6,11 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/05 18:31:30 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/05 22:17:01 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/05 22:52:49 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_list.h"
 #include <stdlib.h>
 
 t_list	*ft_lstnew(void const *content, size_t content_size)
