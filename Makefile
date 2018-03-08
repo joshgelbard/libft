@@ -1,5 +1,5 @@
-target := libft.a
-all: $(target)
+NAME := libft.a
+all: $(NAME)
 
 sublibs :=
 function_names :=
@@ -82,15 +82,15 @@ SHELL := /bin/sh
 CFLAGS := -Wall -Werror -Wextra
 
 
-$(target): $(objects) $(headers) libft.h
-	ar rc $(target) $^
-	ranlib $(target)
+$(NAME): $(objects) $(headers) libft.h
+	ar rc $(NAME) $^
+	ranlib $(NAME)
 
 clean:
 	-rm -f $(objects)
 
 fclean: clean
-	-rm -f $(target)
+	-rm -f $(NAME)
 
 re: fclean
 	make
