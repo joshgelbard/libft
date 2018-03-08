@@ -6,7 +6,7 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/22 17:03:18 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/01 15:22:13 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/08 12:06:48 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ static void	handle_prefix(const char **str_p, int *base_p, int *neg_flag)
 	*str_p = str;
 }
 
-long		clamp_to_bounds(unsigned long res, int isnegative)
+static long	clamp_to_bounds(unsigned long res, int isnegative)
 {
 	if (res > (unsigned long)LONG_MAX + isnegative)
 		return (isnegative ? LONG_MIN : LONG_MAX);
