@@ -6,13 +6,13 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/24 21:53:11 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/02/24 23:59:09 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/08 13:42:44 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_STRING_H
 # define FT_STRING_H
-#include <string.h>
+# include <string.h>
 
 char	*ft_strcat(char *s1, char *s2);
 char	*ft_strchr(const char *s, int c);

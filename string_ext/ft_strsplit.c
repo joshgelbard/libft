@@ -6,7 +6,7 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/01 22:31:58 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/05 16:39:36 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/08 13:36:24 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,13 @@
 #include <string.h>
 #include <stdio.h>
 
-static int	word_count(char const *s, char delim)
+static int		word_count(char const *s, char delim)
 {
 	int	wc;
 	int	in_word;
 
 	wc = 0;
 	in_word = 0;
-
 	while (*s)
 	{
 		if (in_word && *s == delim)
@@ -48,7 +47,7 @@ static size_t	next_word_size(char const *s, char c)
 	return (i);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
 	char	**ary;
 	int		wc;

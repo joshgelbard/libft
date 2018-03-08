@@ -6,7 +6,7 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/02 14:05:07 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/02 16:28:40 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/08 13:37:02 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static size_t	itoa_get_len(int n)
 	return (cc);
 }
 
-char	*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	char	*s;
 	size_t	len;

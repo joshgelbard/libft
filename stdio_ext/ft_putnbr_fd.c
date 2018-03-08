@@ -6,7 +6,7 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/05 14:51:30 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/05 18:06:25 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/08 13:40:11 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static size_t	num_digits(int n)
 	return (cc);
 }
 
-void	ft_putnbr_fd(int n, int fd)
+void			ft_putnbr_fd(int n, int fd)
 {
 	size_t			digits;
 	unsigned int	div;
