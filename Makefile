@@ -16,7 +16,7 @@ function_names += memset bzero memcpy memccpy memmove memchr memcmp strlen \
 
 sublibs += ctype
 vpath ft_% ctype
-function_names += isalpha isdigit isalnum isprint toupper tolower isspace isupper islower
+function_names += isalpha isdigit isalnum isprint toupper tolower isspace isupper islower isascii
 
 #                      LIBC STDLIB
 
