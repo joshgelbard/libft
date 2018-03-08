@@ -14,7 +14,6 @@
 #include "ft_string_ext.h"
 #include "ft_stdio.h"
 #include "ft_stdio_ext.h"
-#include "ft_list.h"
 
 #define DO_MEMFN_TEST(fn)             \
 void	test_ ## fn (void)            \
@@ -34,14 +33,4 @@ int	main(void)                        \
 {                                     \
     test_ ## fn ();                   \
     return (0);                       \
-}
-
-void	print_list(t_list *lst)
-{
-	while (lst)
-	{
-		printf("(`%s'%lu) -> ", lst->content, lst->content_size);
-		lst = lst->next;
-	}
-	printf("%s\n", (void *)lst);
 }
