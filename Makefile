@@ -1,128 +1,31 @@
-NAME := libft.a
-all: $(NAME)
+# recreating libc: string, ctype, stdlib, stdio
+OBJ += ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o ft_memchr.o ft_memcmp.o ft_strlen.o  ft_strdup.o ft_strcpy.o ft_strncpy.o ft_strcat.o ft_strncat.o ft_strlcat.o ft_strchr.o ft_strrchr.o ft_strstr.o ft_strnstr.o ft_strcmp.o ft_strncmp.o
+OBJ += ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isprint.o ft_toupper.o ft_tolower.o ft_isspace.o ft_isupper.o ft_islower.o ft_isascii.o
+OBJ += ft_ctoi.o ft_strtol.o ft_atoi.o
+OBJ += ft_putchar_fd.o ft_putchar.o ft_putstr_fd.o ft_putstr.o ft_putendl_fd.o ft_putendl.o ft_puts.o
 
-sublibs :=
-function_names :=
+# extending libc: string, stdio
+OBJ += ft_memalloc.o ft_memdel.o ft_strnew.o ft_strdel.o ft_strclr.o ft_striter.o ft_striteri.o ft_strmap.o ft_strmapi.o ft_strequ.o ft_strnequ.o ft_strsub.o ft_strjoin.o ft_strtrim.o ft_strsplit.o ft_itoa.o
+OBJ += ft_putnbr_fd.o ft_putnbr.o
 
-#                      LIBC STRING
-
-sublibs += string
-vpath ft_% string
-function_names += memset bzero memcpy memccpy memmove memchr memcmp strlen \
-				 strdup strcpy strncpy strcat strncat strlcat strchr strrchr \
-				 strstr strnstr strcmp strncmp
-
-#                      LIBC CTYPE
-
-sublibs += ctype
-vpath ft_% ctype
-function_names += isalpha isdigit isalnum isprint toupper tolower isspace isupper islower isascii
-
-#                      LIBC STDLIB
-
-sublibs += stdlib
-vpath ft_% stdlib
-function_names += ctoi strtol atoi
-
-#                     STRING_EXT
-
-sublibs += string_ext
-vpath ft_% string_ext
-function_names += memalloc memdel strnew strdel strclr striter striteri strmap strmapi \
-				  strequ strnequ strsub strjoin strtrim strsplit itoa
-
-#                     LIBC STDIO
-
-sublibs += stdio
-vpath ft_% stdio
-function_names += putchar_fd putchar putstr_fd putstr putendl_fd putendl puts
-
-#                     STDIO_EXT
-
-sublibs += stdio_ext
-vpath ft_% stdio_ext
-function_names += putnbr_fd putnbr
-
-#                     LIST
-
-sublibs += list
-vpath ft_% list
-function_names += lstnew lstdelone lstdel lstadd lstiter lstmap
-
-#                 USEFUL VARIABLES
-#-------------------------------------------------
-
-sources := $(patsubst %, ft_%.c, $(function_names))
-objects := $(sources:.c=.o)
-headers := $(patsubst %, ft_%.h, $(sublibs))
-includes := $(patsubst %, -I %, $(sublibs))
-
-
-#           RESTRUCTURING TO 42 STANDARDS
-#-------------------------------------------------
-
-.PHONY: copyup copyclean
-
-copyup:
-	cp $(patsubst %, %/*.c, $(sublibs)) .
-	cp $(patsubst %, %/*.h, $(sublibs)) .
-
-copyclean:
-	-mv libft.h libft.h.tmp
-	-rm *.o *.h *.c
-	-mv libft.h.tmp libft.h
-
-#                    ACTUAL MAKE
-#-------------------------------------------------
+# other additions: ft_list
+OBJ += ft_lstnew.o ft_lstdelone.o ft_lstdel.o ft_lstadd.o ft_lstiter.o ft_lstmap.o
 
 .PHONY: all clean fclean re
 
-CC := gcc
-SHELL := /bin/sh
-CFLAGS := -Wall -Werror -Wextra
+NAME = libft.a
+CC = gcc
+CFLAGS += -Wall -Werror -Wextra
+ARFLAGS = rcsv
 
-
-$(NAME): $(objects) $(headers) libft.h
-	ar rc $(NAME) $^
-	ranlib $(NAME)
+all: $(NAME)
 
 clean:
-	-rm -f $(objects)
+	$(RM) $(OBJ)
 
 fclean: clean
-	-rm -f $(NAME)
+	$(RM) $(NAME)
 
-re: fclean
-	make
+re: fclean all
 
-#                      TESTS
-#-------------------------------------------------
-#-------------------------------------------------
-#-------------------------------------------------
-
-.PHONY: test testall testclean retest
-
-vpath test% test test/stdlib test/ctype test/string
-
-CFLAGS := $(CFLAGS) $(includes) -I test
-
-test: testall
-
-testall: all
-	find test -name "test*.c" -print -exec gcc $(CFLAGS) -L. -lft {} -o test.out \; -exec ./test.out \;
-	rm ./test.out
-
-testsome: all
-	find test/$x -name "test*.c" -print -exec gcc $(CFLAGS) -L. -lft {} -o test.out \; -exec ./test.out \;
-	rm ./test.out
-
-testone: all
-	find test -name "test*$x*.c" -print -exec gcc $(CFLAGS) -L. -lft {} -o test.out \; -exec ./test.out \;
-	rm ./test.out
-
-
-testclean:
-	-rm -f test/*/*.o
-	-rm -f ./test.out
-
-retest: testclean testall
+$(NAME): $(NAME)($(OBJ))
