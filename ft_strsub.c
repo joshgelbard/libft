@@ -6,7 +6,7 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/01 21:12:59 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/01 21:32:06 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/23 13:55:17 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	char	*t;
 
 	t = ft_strnew(len);
-	if (t)
+	if (s && t)
 		ft_strncat(t, s + start, len);
 	return (t);
 }

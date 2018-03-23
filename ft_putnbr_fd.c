@@ -6,12 +6,13 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/05 14:51:30 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/08 13:40:11 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/08 21:15:16 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_stdio.h"
 #include "ft_string_ext.h"
+#include <string.h>
 #define UNSIGNED_POSITIVE(n) (unsigned int)( n < 0 ? n * -1 : n )
 
 static size_t	num_digits(int n)

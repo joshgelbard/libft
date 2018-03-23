@@ -6,7 +6,7 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/02 17:26:10 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/05 14:19:51 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/08 21:15:41 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,5 @@ void	ft_putstr(char const *s);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_putendl(char const *s);
 void	ft_puts(char const *s);
+
 #endif

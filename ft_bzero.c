@@ -6,11 +6,12 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 16:23:54 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/02/24 23:12:30 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/08 21:26:28 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_string.h"
+#include <string.h>
 
 void	ft_bzero(void *s, size_t n)
 {

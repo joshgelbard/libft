@@ -6,7 +6,7 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/01 20:05:16 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/01 20:38:32 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/23 14:09:54 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	char	*t;
 	size_t	i;
 
+	if (!s || !f)
+		return (NULL);
 	i = 0;
 	t = ft_strdup(s);
 	if (t)

@@ -6,7 +6,7 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/01 21:40:25 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/01 22:20:53 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/23 13:56:42 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strtrim(char const *s)
 {
 	size_t	i;
 
+	if (!s)
+		return (NULL);
 	while (ft_isspace(*s))
 		s++;
 	if (*s == '\0')

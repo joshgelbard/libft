@@ -6,12 +6,11 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/02 14:05:07 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/08 13:37:02 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/08 21:27:40 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_string_ext.h"
-#include "ft_string.h"
 #include <string.h>
 #define UNSIGNED_POSITIVE(n) (unsigned int)( n < 0 ? n * -1 : n )
 

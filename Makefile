@@ -12,6 +12,7 @@ OBJ += ft_putnbr_fd.o ft_putnbr.o
 OBJ += ft_lstnew.o ft_lstdelone.o ft_lstdel.o ft_lstadd.o ft_lstiter.o ft_lstmap.o
 
 .PHONY: all clean fclean re
+.SECONDARY:
 
 NAME = libft.a
 CC = gcc
