@@ -6,14 +6,14 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/05 14:15:37 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/05 14:17:06 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/23 17:48:33 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_stdio.h"
+#include "ft_string.h"
+#include <unistd.h>
 
 void	ft_putstr_fd(char const *s, int fd)
 {
-	while (*s)
-		ft_putchar_fd(*s++, fd);
+	write(fd, s, ft_strlen(s));
 }
