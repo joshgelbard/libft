@@ -6,33 +6,21 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/02 14:05:07 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/08 21:27:40 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/23 18:37:25 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_string_ext.h"
+#include "ft_stdlib.h"
 #include <string.h>
 #define UNSIGNED_POSITIVE(n) (unsigned int)( n < 0 ? n * -1 : n )
 
-static size_t	itoa_get_len(int n)
-{
-	size_t	cc;
-
-	cc = (n < 0) + 1;
-	while (UNSIGNED_POSITIVE(n) > 9)
-	{
-		++cc;
-		n /= 10;
-	}
-	return (cc);
-}
-
-char			*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	char	*s;
 	size_t	len;
 
-	len = itoa_get_len(n);
+	len = ft_numlen(n) + (n < 0);
 	s = ft_strnew(len);
 	if (!s)
 		return (NULL);

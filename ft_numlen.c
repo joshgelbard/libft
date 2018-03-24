@@ -1,19 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_numlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/01 17:12:33 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/23 19:02:55 by jgelbard         ###   ########.fr       */
+/*   Created: 2018/03/23 17:52:30 by jgelbard          #+#    #+#             */
+/*   Updated: 2018/03/23 18:42:57 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_string_ext.h"
 #include <string.h>
 
-char	*ft_strnew(size_t size)
+size_t	ft_numlen(int n)
 {
-	return ((char *)ft_memalloc(size + 1));
+	size_t	cc;
+
+	cc = 1;
+	while ((unsigned int)(n < 0 ? n * -1 : n) > 9)
+	{
+		++cc;
+		n /= 10;
+	}
+	return (cc);
 }

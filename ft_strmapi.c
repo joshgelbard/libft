@@ -6,14 +6,13 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/01 20:05:16 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/23 14:10:05 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/23 19:02:11 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_string.h"
 
-char	*ft_strmapi(char const *s,
-		char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*t;
 	size_t	i;
