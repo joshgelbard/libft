@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stdlib.h                                        :+:      :+:    :+:   */
+/*   ft_numlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/24 21:50:48 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/23 18:39:33 by jgelbard         ###   ########.fr       */
+/*   Created: 2018/03/23 17:52:30 by jgelbard          #+#    #+#             */
+/*   Updated: 2018/03/23 18:42:57 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STDLIB_H
-# define FT_STDLIB_H
-# include <string.h>
+#include <string.h>
 
-int		ft_atoi(const char *str);
-int		ft_ctoi(int c, int base);
-long	ft_strtol(const char *str, char **endptr, int base);
-size_t	ft_numlen(int n);
+size_t	ft_numlen(int n)
+{
+	size_t	cc;
 
-#endif
+	cc = 1;
+	while ((unsigned int)(n < 0 ? n * -1 : n) > 9)
+	{
+		++cc;
+		n /= 10;
+	}
+	return (cc);
+}
