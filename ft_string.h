@@ -6,7 +6,7 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/24 21:53:11 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/08 13:42:44 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/23 16:56:26 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ char	*ft_strstr(const char *haystack, const char *needle);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_strcasecmp(const char *s1, const char *s2);
+int		ft_strncasecmp(const char *s1, const char *s2, size_t n);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlen(const char *s);
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
