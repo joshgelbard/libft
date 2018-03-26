@@ -6,13 +6,13 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/01 20:52:29 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/26 12:40:28 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/26 13:52:21 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strequ(char const *s1, char const *s2)
+int		ft_strequ(const char *s1, const char *s2)
 {
 	if (!s1 || !s2)
 		return (!s1 && !s2);

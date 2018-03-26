@@ -6,13 +6,13 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/01 22:31:58 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/26 12:42:07 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/26 13:50:40 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		word_count(char const *s, char delim)
+static int		word_count(const char *s, char delim)
 {
 	int	wc;
 	int	in_word;
@@ -33,7 +33,7 @@ static int		word_count(char const *s, char delim)
 	return (wc);
 }
 
-static size_t	next_word_size(char const *s, char c)
+static size_t	next_word_size(const char *s, char c)
 {
 	size_t	i;
 
@@ -43,7 +43,7 @@ static size_t	next_word_size(char const *s, char c)
 	return (i);
 }
 
-char			**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(const char *s, char c)
 {
 	char	**ary;
 	int		wc;

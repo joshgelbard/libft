@@ -6,7 +6,7 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 17:54:13 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/26 13:20:59 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/26 13:55:57 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,10 +68,10 @@ int				ft_strcmp(const char *s1, const char *s2);
 char			*ft_strcpy(char *dst, const char *src);
 void			ft_strdel(char **as);
 char			*ft_strdup(const char *s1);
-int				ft_strequ(const char *s1, char const *s2);
+int				ft_strequ(const char *s1, const char *s2);
 void			ft_striter(char *s, void (*f)(char *));
 void			ft_striteri(char *s, void (*f)(unsigned int, char *));
-char			*ft_strjoin(const char *s1, char const *s2);
+char			*ft_strjoin(const char *s1, const char *s2);
 size_t			ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t			ft_strlen(const char *s);
 char			*ft_strmap(const char *s, char (*f)(char));
@@ -80,7 +80,7 @@ int				ft_strncasecmp(const char *s1, const char *s2, size_t n);
 char			*ft_strncat(char *s1, const char *s2, size_t n);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strncpy(char *dst, char *src, size_t len);
-int				ft_strnequ(const char *s1, char const *s2, size_t n);
+int				ft_strnequ(const char *s1, const char *s2, size_t n);
 char			*ft_strnew(size_t size);
 char			*ft_strnstr(const char *s1, const char *s2, size_t len);
 char			*ft_strrchr(const char *s, int c);

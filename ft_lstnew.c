@@ -6,13 +6,13 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/05 18:31:30 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/26 12:39:13 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/26 13:47:31 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void const *content, size_t content_size)
+t_list	*ft_lstnew(const void *content, size_t content_size)
 {
 	t_list	*node;
 

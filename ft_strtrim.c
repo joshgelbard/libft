@@ -6,13 +6,13 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/01 21:40:25 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/26 12:42:17 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/26 13:50:40 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s)
+char	*ft_strtrim(const char *s)
 {
 	size_t	i;
 
