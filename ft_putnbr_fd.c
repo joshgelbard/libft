@@ -6,14 +6,11 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/05 14:51:30 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/23 19:07:56 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/26 12:39:49 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_stdio.h"
-#include "ft_stdlib.h"
-#include "ft_string_ext.h"
-#include <string.h>
+#include "libft.h"
 #define UNSIGNED_POSITIVE(n) (unsigned int)( n < 0 ? n * -1 : n )
 
 void			ft_putnbr_fd(int n, int fd)

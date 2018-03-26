@@ -6,11 +6,11 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/05 14:05:30 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/05 14:06:08 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/26 12:39:39 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_stdio.h"
+#include "libft.h"
 
 void	ft_putchar(char c)
 {

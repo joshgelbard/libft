@@ -6,12 +6,11 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/23 16:30:00 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/23 16:58:19 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/26 12:40:58 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_string.h"
-#include "ft_ctype.h"
+#include "libft.h"
 
 int	ft_strncasecmp(const char *s1, const char *s2, size_t n)
 {

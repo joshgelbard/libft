@@ -6,14 +6,11 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/01 21:40:25 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/23 13:56:42 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/26 12:42:17 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_string_ext.h"
-#include "ft_string.h"
-#include "ft_ctype.h"
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strtrim(char const *s)
 {

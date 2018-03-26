@@ -6,13 +6,12 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/02 14:05:07 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/23 18:37:25 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/26 12:37:58 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_string_ext.h"
-#include "ft_stdlib.h"
-#include <string.h>
+#include "libft.h"
+
 #define UNSIGNED_POSITIVE(n) (unsigned int)( n < 0 ? n * -1 : n )
 
 char		*ft_itoa(int n)

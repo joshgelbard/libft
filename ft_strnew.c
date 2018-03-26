@@ -6,12 +6,11 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/01 17:12:33 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/23 19:02:55 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/26 12:41:59 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_string_ext.h"
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strnew(size_t size)
 {

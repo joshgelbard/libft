@@ -6,11 +6,11 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/05 22:54:08 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/08 17:43:56 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/26 12:38:58 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_list.h"
+#include "libft.h"
 
 void	ft_lstadd(t_list **alst, t_list *new)
 {

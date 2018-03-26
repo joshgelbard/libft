@@ -6,11 +6,11 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/01 16:45:57 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/01 16:57:25 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/26 12:39:32 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	ft_memdel(void **ap)
 {

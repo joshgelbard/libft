@@ -6,11 +6,11 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/05 15:25:45 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/05 15:26:43 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/26 12:39:45 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_stdio_ext.h"
+#include "libft.h"
 
 void	ft_putnbr(int n)
 {

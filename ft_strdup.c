@@ -6,13 +6,11 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/20 15:24:18 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/23 19:00:39 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/26 12:40:24 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_string.h"
-#include <string.h>
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strdup(const char *s1)
 {

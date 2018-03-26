@@ -6,11 +6,11 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/20 15:43:34 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/02/25 00:26:11 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/26 12:40:16 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strcpy(char *dst, const char *src)
 {

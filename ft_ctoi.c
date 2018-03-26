@@ -6,11 +6,11 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/23 14:10:51 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/02/24 23:55:46 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/26 12:37:17 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_ctype.h"
+#include "libft.h"
 
 int	ft_ctoi(int c, int base)
 {

@@ -6,15 +6,11 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/01 22:31:58 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/08 13:36:24 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/26 12:42:07 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_string_ext.h"
-#include "ft_string.h"
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 static int		word_count(char const *s, char delim)
 {

@@ -6,13 +6,11 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/05 18:31:30 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/08 18:26:35 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/26 12:39:13 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_list.h"
-#include "ft_string.h"
-#include <stdlib.h>
+#include "libft.h"
 
 t_list	*ft_lstnew(void const *content, size_t content_size)
 {

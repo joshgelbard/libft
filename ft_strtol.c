@@ -6,13 +6,11 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/22 17:03:18 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/08 13:39:42 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/26 12:42:14 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_stdlib.h"
-#include "ft_string.h"
-#include "ft_ctype.h"
+#include "libft.h"
 
 #ifndef LONG_MAX
 # define LONG_MAX	9223372036854775807L

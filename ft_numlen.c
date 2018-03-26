@@ -6,11 +6,11 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/23 17:52:30 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/23 18:42:57 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/26 12:39:38 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 size_t	ft_numlen(int n)
 {

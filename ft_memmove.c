@@ -6,12 +6,11 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/20 14:07:39 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/23 13:31:57 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/26 12:39:34 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_string.h"
-#include <string.h>
+#include "libft.h"
 
 static void	ft_backwards_memcpy(void *dst, const void *src, size_t n)
 {

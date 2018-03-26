@@ -6,11 +6,11 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/21 21:27:54 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/08 13:42:21 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/26 12:42:05 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 static char	*recurse(const char *haystack, const char *needle,
 		size_t len, size_t matched)
