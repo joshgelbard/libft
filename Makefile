@@ -12,6 +12,8 @@ OBJ += ft_numlen.o
 # other additions: ft_list
 OBJ += ft_lstnew.o ft_lstdelone.o ft_lstdel.o ft_lstadd.o ft_lstiter.o ft_lstmap.o
 
+SRC = $(OBJ:%.o=%.c)
+
 .PHONY: all clean fclean re
 .SECONDARY:
 
@@ -22,6 +24,10 @@ ARFLAGS = rcsv
 
 all: $(NAME)
 
+$(NAME): $(SRC)
+	$(CC) $(CFLAGS) -c $(SRC)
+	ar rcs $(NAME) $(OBJ)
+
 clean:
 	$(RM) $(OBJ)
 
@@ -29,5 +35,3 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
-
-$(NAME): $(NAME)($(OBJ))
