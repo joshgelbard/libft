@@ -7,7 +7,7 @@ OBJ += ft_putchar_fd.o ft_putchar.o ft_putstr_fd.o ft_putstr.o ft_putendl_fd.o f
 # extending libc: string, stdio, stdlib
 OBJ += ft_memalloc.o ft_memdel.o ft_strnew.o ft_strdel.o ft_strclr.o ft_striter.o ft_striteri.o ft_strmap.o ft_strmapi.o ft_strequ.o ft_strnequ.o ft_strsub.o ft_strjoin.o ft_strtrim.o ft_strsplit.o ft_itoa.o ft_strcasecmp.o ft_strncasecmp.o
 OBJ += ft_putnbr_fd.o ft_putnbr.o
-OBJ += ft_numlen.o
+OBJ += ft_numlen.o ft_bytestr.o ft_bitstr.o
 
 # other additions: ft_list
 OBJ += ft_lstnew.o ft_lstdelone.o ft_lstdel.o ft_lstadd.o ft_lstiter.o ft_lstmap.o
