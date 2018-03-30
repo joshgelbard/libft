@@ -6,12 +6,14 @@
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 17:54:13 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/26 13:55:57 by jgelbard         ###   ########.fr       */
+/*   Updated: 2018/03/29 19:37:56 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# define BYTE_AT *(unsigned char *)
+# define BYTE unsigned char
 
 # include <string.h>
 # include <unistd.h>
@@ -50,7 +52,11 @@ void			*ft_memcpy(void *dst, const void *src, size_t n);
 void			ft_memdel(void **ap);
 void			*ft_memmove(void *dst, const void *src, size_t len);
 void			*ft_memset(void *b, int c, size_t len);
+char			*ft_memtostr(void *p, size_t len);
 size_t			ft_numlen(int n);
+void			ft_putbits(unsigned int n);
+void			ft_putbitsc(unsigned char n);
+void			ft_putbitsl(unsigned long n);
 void			ft_putchar(char c);
 void			ft_putchar_fd(char c, int fd);
 void			ft_putendl(const char *s);

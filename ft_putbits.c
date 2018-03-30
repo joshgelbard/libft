@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bitstr.c                                        :+:      :+:    :+:   */
+/*   ft_putbits.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgelbard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/29 14:06:31 by jgelbard          #+#    #+#             */
-/*   Updated: 2018/03/29 14:07:52 by jgelbard         ###   ########.fr       */
+/*   Created: 2018/03/29 19:42:56 by jgelbard          #+#    #+#             */
+/*   Updated: 2018/03/29 19:43:31 by jgelbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_bitstr(void *p, size_t len)
-{
-	char	*s;
-	size_t	i;
-	size_t	j;
+#include "libft.h"
 
-	if (!(s = malloc(len * 8 + 1)))
-		return (NULL);
-	i = 0;
-	while (i < len)
+void	ft_putbits(unsigned int n)
+{
+	unsigned int	mask;
+
+	mask = 1 << (sizeof(mask) * 8 - 1);
+	while (mask)
 	{
-		j = 0;
-		while (j < 8)
-		{
-			s[i * 8 + j] = j & p[i];
-			++j;
-		}
-		++i;
+		ft_putchar('0' + !!(n & mask));
+		mask = mask >> 1;
 	}
-	s[len * 8] = '\0';
-	return (s);
+	ft_putchar('\n');
 }
