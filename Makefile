@@ -20,7 +20,9 @@ SRC = $(OBJ:%.o=%.c)
 NAME = libft.a
 CC = gcc
 CFLAGS += -Wall -Werror -Wextra
-ARFLAGS = rcs
+AR = ar
+ARFLAGS = rs
+RM = rm -f
 
 all: $(NAME)
 
