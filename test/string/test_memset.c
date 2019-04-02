@@ -1,5 +1,4 @@
 #include "test.h"
-#include "ft_string.h"
 
 void	x_memset(void *dst, void *(f)(void *dst, int c, size_t len))
 {

@@ -1,5 +1,4 @@
 #include "test.h"
-#include "ft_string.h"
 
 int	test_strlcat(char *s1, char *s2, int n)
 {

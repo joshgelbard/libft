@@ -1,5 +1,4 @@
 #include "test.h"
-#include "ft_string.h"
 
 void	x_bzero(void *s, void (*f)(void *s, size_t n))
 {

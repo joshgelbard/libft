@@ -1,0 +1,10 @@
+testdirs=(ctype stdio stdio_ext stdlib string string_ext)
+for d in ${testdirs[@]}; do
+	cd "$d"
+	for f in *.c; do
+		progname="$(basename "$f" .c)"
+		gcc -o "$progname" -I../.. -I.. "$f" -L../.. -lft
+		"./$progname"
+	done
+	cd ..
+done

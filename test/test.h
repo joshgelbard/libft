@@ -8,12 +8,7 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <limits.h>
-#include "ft_string.h"
-#include "ft_stdlib.h"
-#include "ft_ctype.h"
-#include "ft_string_ext.h"
-#include "ft_stdio.h"
-#include "ft_stdio_ext.h"
+#include "libft.h"
 
 #define DO_MEMFN_TEST(fn)             \
 void	test_ ## fn (void)            \

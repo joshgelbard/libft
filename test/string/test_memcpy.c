@@ -1,5 +1,4 @@
 #include "test.h"
-#include "ft_string.h"
 
 void	x_memcpy(void *dst, void *(f)(void *dst, const void *src, size_t n))
 {
