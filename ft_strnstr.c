@@ -29,5 +29,7 @@ static char	*recurse(const char *haystack, const char *needle,
 
 char		*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
+	if (!*needle)
+		return ((char *)haystack);
 	return (len == 0 ? NULL : recurse(haystack, needle, len, 0));
 }
