@@ -4,7 +4,7 @@ for d in ${testdirs[@]}; do
 	for f in *.c; do
 		progname="$(basename "$f" .c)"
 		gcc -o "$progname" -I../.. -I.. "$f" -L../.. -lft
-		"./$progname"
+		"./$progname" && rm "$progname"
 	done
 	cd ..
 done
